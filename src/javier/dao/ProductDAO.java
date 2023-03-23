@@ -7,6 +7,8 @@ public interface ProductDAO {
     public void update(Product product);
     public void delete(Product product);
     public Product read(Integer id);
+
+    public void delete(int i);
 }
 
 

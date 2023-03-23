@@ -9,19 +9,16 @@ public class ProductManager {
         ProductDAO product = new ProductDAOImpl();
         
         //agregar nuevo producto
-        product.insert(new Product(4,"pollo",7.99));
+        product.insert(new Product(5,"abra",7.99));
         
         //actualizar product
-        Product updatedProduct = new Product(200, "Pollo", 7.99);
-        product.update(updatedProduct);
+        product.update(new Product(4, "abra", 1.99));
         
         //borrar un producto
-        ProductDAOImpl productDAO = new ProductDAOImpl();
-        int productId = 200;
-        productDAO.delete(productId);
+        product.delete(4);
         
         //obtener el producto con el ID = 100
-        Product p = product.read(4);
+        Product p = product.read(5);
         System.out.println(p);
     }
 }

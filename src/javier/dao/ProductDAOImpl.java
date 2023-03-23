@@ -89,7 +89,7 @@ public class ProductDAOImpl implements ProductDAO {
             conn = DriverManager.getConnection(DB_URL, DB_USR, DB_PWD);
             Statement stmt = conn.createStatement();
             // enviar el comando delete
-            stmt.executeUpdate("delete from product where id = " + productId);
+            stmt.executeUpdate("delete from product where id=" + productId + ";");
         } catch (SQLException ex) {
             throw new RuntimeException(ex);
         } finally {
